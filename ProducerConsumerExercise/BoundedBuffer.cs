@@ -8,13 +8,14 @@ namespace ProducerConsumerExercise
 {
     public class BoundedBuffer
     {
-        private int _capacity;
         private Object _lockObject = new object();
-        private Queue<int> _bufferData = new Queue<int>();
+        private Queue<int> _bufferData;
+        private int _capacity;
 
         public BoundedBuffer(int capacity)
         {
             this._capacity = capacity;
+            _bufferData = new Queue<int>(_capacity);
         }
 
         public void Put(int element)

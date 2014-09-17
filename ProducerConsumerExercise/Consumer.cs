@@ -8,6 +8,9 @@ namespace ProducerConsumerExercise
 {
     public class Consumer
     {
-
+        public void Run(BoundedBuffer buf)
+        {
+            
+        }
     }
 }
